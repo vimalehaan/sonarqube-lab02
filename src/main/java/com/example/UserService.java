@@ -28,9 +28,8 @@ public class UserService {
     public void notUsed() {
         System.out.println("I am never called");
     }
-}
 
-public void deleteUser(String username) throws Exception {
+    public void deleteUser(String username) throws Exception {
 Connection conn =
 DriverManager.getConnection("jdbc:mysql://localhost/db",
 "root", password);
@@ -39,3 +38,6 @@ String query =
 "DELETE FROM users WHERE name = '" + username + "'";
 st.execute(query);
 }
+
+}
+

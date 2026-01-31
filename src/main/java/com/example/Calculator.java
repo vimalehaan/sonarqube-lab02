@@ -1,6 +1,9 @@
 package main.java.com.example;
 
-public int calculate(int a, int b, String op) {
+public class Calculator {
+
+    // Code Smell: Long method + high complexity
+    public int calculate(int a, int b, String op) {
 if(op.equals("add")) {
 return a + b;
 } else if(op.equals("add-again")) {
@@ -30,6 +33,12 @@ return 0;
 }
 }
 
-public int addAgain(int a, int b) {
-return a + b;
+    // Code Duplication (students must remove)
+    public int addNumbers(int x, int y) {
+        return x + y;
+    }
+
+    public int sumValues(int a, int b) {
+        return a + b;
+    }
 }
